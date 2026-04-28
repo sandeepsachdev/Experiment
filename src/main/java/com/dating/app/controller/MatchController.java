@@ -54,4 +54,9 @@ public class MatchController {
     public List<Profile> getLikesReceived(@PathVariable Long profileId) {
         return matchService.getLikesReceived(profileId);
     }
+
+    @GetMapping("/likes/{profileId}/sent")
+    public List<Profile> getLikesSent(@PathVariable Long profileId) {
+        return matchService.getLikesSent(profileId);
+    }
 }

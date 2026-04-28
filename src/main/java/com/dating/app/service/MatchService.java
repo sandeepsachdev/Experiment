@@ -61,6 +61,12 @@ public class MatchService {
         return profileRepository.findAllById(likerIds);
     }
 
+    public List<Profile> getLikesSent(Long profileId) {
+        List<Long> likedIds = likeRepository.findByLikerId(profileId)
+            .stream().map(Like::getLikedId).toList();
+        return profileRepository.findAllById(likedIds);
+    }
+
     public Optional<Profile> unlike(Long likerId, Long likedId) {
         return likeRepository.findByLikerIdAndLikedId(likerId, likedId).map(like -> {
             likeRepository.delete(like);
