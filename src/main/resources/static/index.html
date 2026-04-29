@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OddsEdge – Live Betting Odds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">📊</span>
+      <span class="logo-text">OddsEdge</span>
+    </div>
+
+    <div class="header-controls">
+      <div class="odds-toggle">
+        <span class="toggle-label">Odds</span>
+        <div class="toggle-group" id="oddsFormatGroup">
+          <button class="toggle-btn active" data-format="american">American</button>
+          <button class="toggle-btn" data-format="decimal">Decimal</button>
+          <button class="toggle-btn" data-format="fractional">Fractional</button>
+        </div>
+      </div>
+
+      <button class="betslip-trigger" id="betslipTrigger">
+        🎟 Bet Slip
+        <span class="betslip-count hidden" id="betslipCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════ MAIN ═════════════════════════════════════ -->
+<div class="app-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <p class="sidebar-label">Status</p>
+      <nav class="status-nav" id="statusNav">
+        <button class="snav-btn active" data-status="ALL">All Events</button>
+        <button class="snav-btn" data-status="LIVE">
+          <span class="live-dot"></span> Live Now
+        </button>
+        <button class="snav-btn" data-status="UPCOMING">Upcoming</button>
+      </nav>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-label">Sport</p>
+      <nav class="sport-nav" id="sportNav">
+        <button class="snav-btn active" data-category="ALL">🏆 All Sports</button>
+        <button class="snav-btn" data-category="NBA">🏀 NBA</button>
+        <button class="snav-btn" data-category="MLB">⚾ MLB</button>
+        <button class="snav-btn" data-category="NHL">🏒 NHL</button>
+        <button class="snav-btn" data-category="SOCCER">⚽ Soccer</button>
+        <button class="snav-btn" data-category="TENNIS">🎾 Tennis</button>
+        <button class="snav-btn" data-category="MMA">🥊 MMA</button>
+        <button class="snav-btn" data-category="BOXING">🥊 Boxing</button>
+        <button class="snav-btn" data-category="POLITICS">🗳️ Politics</button>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Events feed -->
+  <main class="events-main">
+    <div class="events-toolbar">
+      <h2 id="feedTitle">All Events</h2>
+      <span class="event-count" id="eventCount"></span>
+    </div>
+    <div id="eventsGrid" class="events-grid"></div>
+  </main>
+
+  <!-- Bet slip -->
+  <aside class="betslip-panel" id="betslipPanel">
+    <div class="betslip-header">
+      <h3>🎟 Bet Slip</h3>
+      <button class="betslip-close" id="betslipClose">✕</button>
+    </div>
+    <div id="betslipItems" class="betslip-items">
+      <div class="betslip-empty">No selections yet.<br>Click any odds to add a bet.</div>
+    </div>
+    <div class="betslip-footer" id="betslipFooter" style="display:none">
+      <div class="betslip-summary">
+        <span>Total Odds</span>
+        <span class="betslip-total-odds" id="betslipTotalOdds">—</span>
+      </div>
+      <input type="number" class="stake-input" id="stakeInput" placeholder="Stake ($)" min="1">
+      <div class="payout-row">
+        <span>Est. Payout</span>
+        <span class="payout-value" id="payoutValue">—</span>
+      </div>
+      <button class="btn-place-bet">Place Bet</button>
+      <button class="btn-clear-slip" id="clearSlip">Clear All</button>
+    </div>
+  </aside>
+</div>
+
+<!-- Mobile bet slip overlay -->
+<div class="betslip-overlay hidden" id="betslipOverlay"></div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
