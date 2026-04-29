@@ -224,6 +224,275 @@ public class DataInitializer implements CommandLineRunner {
             o("Knicks -3.5", 1.91), o("76ers +3.5", 1.91));
         market(knicks76ers, "Total Points",
             o("Over 210.5", 1.91), o("Under 210.5", 1.91));
+
+        // ── AFL ───────────────────────────────────────────────────────────────
+
+        Event collCarlton = event("Collingwood vs Carlton",
+            "AFL", "AFL 2026 – Round 7",
+            "Collingwood", "Carlton",
+            LocalDateTime.of(2026, 5, 1, 19, 30), "UPCOMING", true);
+        market(collCarlton, "Head to Head",
+            o("Collingwood", 1.72), o("Carlton", 2.15));
+        market(collCarlton, "Line",
+            o("Collingwood -12.5", 1.91), o("Carlton +12.5", 1.91));
+        market(collCarlton, "Total Points",
+            o("Over 165.5", 1.91), o("Under 165.5", 1.91));
+
+        Event swansGWS = event("Sydney Swans vs GWS Giants",
+            "AFL", "AFL 2026 – Round 7",
+            "Sydney Swans", "GWS Giants",
+            LocalDateTime.of(2026, 5, 2, 16, 10), "UPCOMING", false);
+        market(swansGWS, "Head to Head",
+            o("Sydney Swans", 1.55), o("GWS Giants", 2.50));
+        market(swansGWS, "Line",
+            o("Swans -8.5", 1.91), o("GWS +8.5", 1.91));
+        market(swansGWS, "Total Points",
+            o("Over 158.5", 1.91), o("Under 158.5", 1.91));
+
+        Event richmondGeelong = event("Richmond vs Geelong",
+            "AFL", "AFL 2026 – Round 7",
+            "Richmond", "Geelong",
+            LocalDateTime.of(2026, 5, 3, 14, 30), "UPCOMING", false);
+        market(richmondGeelong, "Head to Head",
+            o("Richmond", 3.10), o("Geelong", 1.38));
+        market(richmondGeelong, "Line",
+            o("Richmond +20.5", 1.91), o("Geelong -20.5", 1.91));
+        market(richmondGeelong, "Total Points",
+            o("Over 155.5", 1.91), o("Under 155.5", 1.91));
+
+        Event brisbaneFreo = event("Brisbane Lions vs Fremantle",
+            "AFL", "AFL 2026 – Round 8",
+            "Brisbane Lions", "Fremantle",
+            LocalDateTime.of(2026, 5, 8, 19, 20), "UPCOMING", false);
+        market(brisbaneFreo, "Head to Head",
+            o("Brisbane Lions", 1.45), o("Fremantle", 2.80));
+        market(brisbaneFreo, "Line",
+            o("Lions -14.5", 1.91), o("Fremantle +14.5", 1.91));
+        market(brisbaneFreo, "Total Points",
+            o("Over 162.5", 1.91), o("Under 162.5", 1.91));
+
+        Event aflPremier = event("AFL 2026 Premiership – Outright Winner",
+            "AFL", "AFL 2026 Season",
+            null, null,
+            LocalDateTime.of(2026, 9, 26, 14, 30), "UPCOMING", true);
+        market(aflPremier, "Premiership Winner",
+            o("Collingwood", 5.50),
+            o("Brisbane Lions", 6.00),
+            o("Sydney Swans", 7.00),
+            o("Geelong", 7.50),
+            o("Carlton", 9.00),
+            o("Melbourne", 10.00),
+            o("GWS Giants", 11.00),
+            o("Fremantle", 12.00),
+            o("Richmond", 15.00),
+            o("Port Adelaide", 13.00),
+            o("Western Bulldogs", 17.00),
+            o("Hawthorn", 19.00));
+
+        // ── NRL ───────────────────────────────────────────────────────────────
+
+        Event roostersRabbits = event("Sydney Roosters vs South Sydney Rabbitohs",
+            "NRL", "NRL 2026 – Round 9",
+            "Sydney Roosters", "South Sydney Rabbitohs",
+            LocalDateTime.of(2026, 4, 30, 20, 0), "UPCOMING", true);
+        market(roostersRabbits, "Head to Head",
+            o("Sydney Roosters", 1.65), o("South Sydney Rabbitohs", 2.25));
+        market(roostersRabbits, "Line",
+            o("Roosters -6.5", 1.91), o("Rabbitohs +6.5", 1.91));
+        market(roostersRabbits, "Total Points",
+            o("Over 43.5", 1.91), o("Under 43.5", 1.91));
+
+        Event penrithParramatta = event("Penrith Panthers vs Parramatta Eels",
+            "NRL", "NRL 2026 – Round 9",
+            "Penrith Panthers", "Parramatta Eels",
+            LocalDateTime.of(2026, 5, 1, 19, 50), "UPCOMING", false);
+        market(penrithParramatta, "Head to Head",
+            o("Penrith Panthers", 1.42), o("Parramatta Eels", 2.88));
+        market(penrithParramatta, "Line",
+            o("Panthers -10.5", 1.91), o("Eels +10.5", 1.91));
+        market(penrithParramatta, "Total Points",
+            o("Over 46.5", 1.91), o("Under 46.5", 1.91));
+
+        Event brisbaneStorm = event("Brisbane Broncos vs Melbourne Storm",
+            "NRL", "NRL 2026 – Round 9",
+            "Brisbane Broncos", "Melbourne Storm",
+            LocalDateTime.of(2026, 5, 2, 18, 0), "UPCOMING", false);
+        market(brisbaneStorm, "Head to Head",
+            o("Brisbane Broncos", 2.40), o("Melbourne Storm", 1.62));
+        market(brisbaneStorm, "Line",
+            o("Broncos +8.5", 1.91), o("Storm -8.5", 1.91));
+        market(brisbaneStorm, "Total Points",
+            o("Over 44.5", 1.91), o("Under 44.5", 1.91));
+
+        Event nrlPremier = event("NRL 2026 Premiership – Outright Winner",
+            "NRL", "NRL 2026 Season",
+            null, null,
+            LocalDateTime.of(2026, 10, 4, 18, 0), "UPCOMING", true);
+        market(nrlPremier, "Premiership Winner",
+            o("Penrith Panthers", 4.50),
+            o("Melbourne Storm", 5.00),
+            o("Sydney Roosters", 7.00),
+            o("Brisbane Broncos", 8.00),
+            o("South Sydney Rabbitohs", 9.00),
+            o("Parramatta Eels", 11.00),
+            o("Newcastle Knights", 13.00),
+            o("North Queensland Cowboys", 14.00),
+            o("Cronulla Sharks", 13.00),
+            o("Canberra Raiders", 17.00));
+
+        // ── HORSE RACING ──────────────────────────────────────────────────────
+
+        Event doombenCup = event("Doomben Cup 2026",
+            "RACING", "Group 1 – Eagle Farm, Brisbane",
+            null, null,
+            LocalDateTime.of(2026, 5, 9, 15, 35), "UPCOMING", true);
+        market(doombenCup, "Win",
+            o("Anamoe", 3.50),
+            o("Profiteer", 4.50),
+            o("Zaaki", 5.00),
+            o("Alligator Blood", 6.00),
+            o("Fangirl", 7.00),
+            o("Home Affairs", 8.00),
+            o("Sir Dragonet", 10.00),
+            o("Wisdom of Water", 15.00));
+
+        Event stradbrokeHandicap = event("Stradbroke Handicap 2026",
+            "RACING", "Group 1 – Eagle Farm, Brisbane",
+            null, null,
+            LocalDateTime.of(2026, 6, 6, 16, 15), "UPCOMING", false);
+        market(stradbrokeHandicap, "Win",
+            o("Rothfire", 5.00),
+            o("Nature Strip", 5.50),
+            o("Eduardo", 6.00),
+            o("Masked Crusader", 7.00),
+            o("Incentivise", 8.00),
+            o("Tofane", 9.00),
+            o("Crosshaven", 10.00),
+            o("Gytrash", 12.00));
+
+        Event melbCup = event("Melbourne Cup 2026",
+            "RACING", "Group 1 – Flemington Racecourse",
+            null, null,
+            LocalDateTime.of(2026, 11, 3, 15, 0), "UPCOMING", true);
+        market(melbCup, "Win",
+            o("Without A Fight", 6.00),
+            o("Gold Trip", 7.00),
+            o("Verry Elleegant", 8.00),
+            o("Delectation", 9.00),
+            o("Emissary", 10.00),
+            o("Twilight Payment", 11.00),
+            o("Montefilia", 12.00),
+            o("Explosive Jack", 14.00),
+            o("Smokin' Romans", 15.00),
+            o("Knights Order", 17.00));
+        market(melbCup, "Winning Country",
+            o("Australia", 2.20),
+            o("Ireland", 2.80),
+            o("UK / Europe", 4.00),
+            o("New Zealand", 6.00));
+
+        // ── IRAN / MIDDLE EAST POLITICS ───────────────────────────────────────
+
+        Event iranCeasefire = event("Iran Conflict – Ceasefire by 31 Dec 2026",
+            "POLITICS", "Iran / Middle East 2026",
+            null, null,
+            LocalDateTime.of(2026, 12, 31, 23, 59), "UPCOMING", true);
+        market(iranCeasefire, "Ceasefire Agreement Reached",
+            o("Yes", 2.75), o("No", 1.50));
+        market(iranCeasefire, "Ceasefire Brokered By",
+            o("United Nations", 3.50),
+            o("United States", 4.00),
+            o("Qatar / Gulf States", 5.00),
+            o("No Ceasefire", 1.50));
+
+        Event iranNuclear = event("Iran Nuclear Deal – Signed Before 2027",
+            "POLITICS", "Iran / Middle East 2026",
+            null, null,
+            LocalDateTime.of(2026, 12, 31, 23, 59), "UPCOMING", false);
+        market(iranNuclear, "Deal Signed",
+            o("Yes", 3.75), o("No", 1.30));
+        market(iranNuclear, "Deal Type",
+            o("Full Agreement", 5.00),
+            o("Partial / Interim Deal", 4.50),
+            o("No Deal", 1.30));
+
+        Event usIranMilitary = event("US Military Action Against Iran in 2026",
+            "POLITICS", "Iran / Middle East 2026",
+            null, null,
+            LocalDateTime.of(2026, 12, 31, 23, 59), "UPCOMING", true);
+        market(usIranMilitary, "US Strikes Iran",
+            o("Yes", 3.20), o("No", 1.36));
+        market(usIranMilitary, "Type of Action",
+            o("Airstrikes only", 4.00),
+            o("Naval blockade", 6.00),
+            o("Ground forces deployed", 12.00),
+            o("No military action", 1.36));
+
+        Event midEastRegionalWar = event("Middle East – Regional War by July 2027",
+            "POLITICS", "Iran / Middle East 2026",
+            null, null,
+            LocalDateTime.of(2027, 7, 1, 0, 0), "UPCOMING", false);
+        market(midEastRegionalWar, "Regional War Breaks Out",
+            o("Yes", 2.40), o("No", 1.57));
+        market(midEastRegionalWar, "Next Country Drawn In",
+            o("Saudi Arabia", 3.50),
+            o("Jordan", 5.00),
+            o("Turkey", 6.00),
+            o("Egypt", 8.00),
+            o("No escalation", 1.57));
+
+        Event iranLeader = event("Iran – Supreme Leader Change by End of 2027",
+            "POLITICS", "Iran / Middle East 2026",
+            null, null,
+            LocalDateTime.of(2027, 12, 31, 23, 59), "UPCOMING", false);
+        market(iranLeader, "Supreme Leader Changes",
+            o("Yes", 4.50), o("No", 1.22));
+        market(iranLeader, "Transition Outcome",
+            o("Orderly succession", 5.50),
+            o("Power struggle / instability", 7.00),
+            o("Military takes control", 12.00),
+            o("No change", 1.22));
+
+        // ── ELECTIONS ─────────────────────────────────────────────────────────
+
+        Event vicElection = event("Victorian State Election 2026",
+            "POLITICS", "Victorian State Election – 28 November 2026",
+            null, null,
+            LocalDateTime.of(2026, 11, 28, 18, 0), "UPCOMING", true);
+        market(vicElection, "Election Winner",
+            o("Labor (incumbent)", 1.40),
+            o("Liberal-National Coalition", 3.00),
+            o("Hung Parliament", 12.00));
+        market(vicElection, "Labor Majority Size",
+            o("Majority government", 1.50),
+            o("Minority government", 3.80),
+            o("Coalition wins", 3.00));
+
+        Event brazilElection = event("Brazilian Presidential Election 2026",
+            "POLITICS", "Brazil General Election – 4 October 2026",
+            null, null,
+            LocalDateTime.of(2026, 10, 4, 20, 0), "UPCOMING", true);
+        market(brazilElection, "Presidential Winner",
+            o("Luiz Inácio Lula da Silva", 2.10),
+            o("Jair Bolsonaro", 3.50),
+            o("Other / Third Candidate", 5.00));
+        market(brazilElection, "Goes to Second Round",
+            o("Yes", 1.45), o("No", 2.70));
+
+        Event frenchElection = event("French Presidential Election 2027",
+            "POLITICS", "France Presidential Election – April 2027",
+            null, null,
+            LocalDateTime.of(2027, 4, 23, 20, 0), "UPCOMING", false);
+        market(frenchElection, "First Round Leader",
+            o("Marine Le Pen (RN)", 2.75),
+            o("Centre-Left candidate", 3.20),
+            o("Centre-Right candidate", 4.00),
+            o("Jean-Luc Mélenchon (LFI)", 8.00));
+        market(frenchElection, "Presidential Winner",
+            o("Marine Le Pen", 3.00),
+            o("Centre-Left candidate", 3.50),
+            o("Centre-Right candidate", 4.50),
+            o("Far-Left candidate", 10.00));
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────
